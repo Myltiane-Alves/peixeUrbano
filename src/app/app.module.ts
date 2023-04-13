@@ -9,6 +9,9 @@ import { FooterComponent } from './footer/footer.component';
 import { RestaurantesComponent } from './restaurantes/restaurantes.component';
 import { RComponent } from './r/r.component';
 import { DiversaoComponent } from './diversao/diversao.component';
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './app.routes';
+import { OfertaComponent } from './oferta/oferta.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,13 @@ import { DiversaoComponent } from './diversao/diversao.component';
     FooterComponent,
     RestaurantesComponent,
     RComponent,
-    DiversaoComponent
+    DiversaoComponent,
+    OfertaComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forChild(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
